@@ -85,5 +85,11 @@ body.body-bg {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.45)
 }
 .clip-dog-ear {
-  clip-path: polygon(100% 0, 0 0, 100%);
+  clip-path: polygon(
+    0% 0%,                     /* Top-left corner */
+    calc(100% - 40px) 0%,      /* Top-right, stopping 40px short */
+    100% 40px,                  /* 40px down from the top-right */
+    100% 100%,                  /* Bottom-right corner */
+    0% 100%                     /* Bottom-left corner */
+    );
 }
