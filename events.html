@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - Milestone School</title>
+   <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./src/input.css">
+  <link href="./dist/output.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+ <!-- <link rel="stylesheet" href="tailwind.config.js"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="assets/logo.png" alt="Milestone School Logo" class="slide-in-left h-10 w-auto object-contain">
+        <span class="slide-in-left text-2xl decoration-double font-bold text-gray-600 text-shadow-lg">Milestone School</span>
+      </a>
+
+    <div class="slide-in-left hidden md:flex space-x-6 text-gray-600 text-shadow-sm">
+  <a href="index.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Home</a>
+  <a href="admissions.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Admissions</a>
+  <a href="events.html" class="font-bold text-turquoise hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Events</a>
+  <a href="news.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">News</a>
+  <a href="staff.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Staff</a>
+  <a href="schedule.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Schedule</a>
+  <a href="gallery.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Gallery</a>
+  <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact</a>
+</div>
+      <button class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+<main class="container mx-auto px-6 py-12">
+  <h1 class="text-4xl font-bold text-center text-turquoise mb-6 text-shadow-sm" data-aos="fade-in">
+    School Events & Calendar
+  </h1>
+  
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-turquoise pb-2 text-shadow-sm" data-aos="fade-up">Upcoming Events</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="bg-green-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://placehold.co/600x400/14B8A6/FFFFFF/png?text=Cultural+Day" alt="Cultural Day Celebration" class="w-40 h-40 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2 text-shadow-sm">Cultural Day 2025</h3>
+          <p class="text-gray-600 text-sm mb-4">A celebration of diversity where learners showcase traditional foods, dances, and attire.</p>
+        </div>
+      </div>
+      
+      <div class="bg-green-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://placehold.co/600x400/FBBF24/333333/png?text=Sports+Festival" alt="Annual Sports Festival" class="w-40 h-40 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2 text-shadow-sm">Annual Sports Festival</h3>
+          <p class="text-gray-600 text-sm mb-4">Inter-house competitions in athletics, football, netball, and other sporting activities.</p>
+        </div>
+      </div>
+
+      <div class="bg-green-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://placehold.co/600x400/333333/FFFFFF/png?text=Graduation" alt="Graduation Ceremony" class="w-40 h-40 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2 text-shadow-sm">Graduation Ceremony</h3>
+          <p class="text-gray-600 text-sm mb-4">Recognizing learners’ achievements as they transition to higher grades.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8" data-aos="fade-up">
+      <a href="#" class="inline-block bg-yellow text-gray-900 font-bold py-3 px-8 rounded-full tranform transition-transform hover:bg-yellow-500 hover:scale-110">View Full Calendar</a>
+    </div>
+  </section>
+
+<section class="mb-40">
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-10 border-b-2 border-turquoise pb-2 text-shadow-sm" data-aos="fade-up">Past Highlights</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-green-50 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://placehold.co/600x400/14B8A6/FFFFFF/png?text=2024+Concert" alt="2024 Concert" class="w-40 md:w-40 h-40 md:h-40 object-cover">
+            <div class="p-4"> 
+                <h3 class="text-xl font-bold text-gray-800 mb-2 text-shadow-sm">2024 Concert and Cultural Showcase</h3>
+                <p class="text-gray-600 text-sm mb-4">Learners represented various countries through vibrant performances, cuisine, and displays.</p>
+                <a href="gallery.html" class="text-turquoise font-semibold hover:underline">View Photo Gallery &rarr;</a>
+            </div>
+        </div>
+        <div class="bg-green-50 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row items-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://placehold.co/600x400/FBBF24/333333/png?text=Awards" alt="Academic Awards" class="w-40 md:w-40 h-40 md:h-40 object-cover">
+            <div class="p-4"> 
+                <h3 class="text-xl font-bold text-gray-800 smb-2 text-shadow-sm">Academic Awards Ceremony</h3>
+                <p class="text-gray-600 text-sm mb-4">Recognizing top-performing students in academics, behavior, and leadership.</p>
+                <a href="gallery.html" class="text-turquoise font-semibold hover:underline">View Photo Gallery &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="grid md:grid-cols-2 gap-8 mt-12 mb-12">
+    <div class="bg-green-50 p-8 rounded-lg shadow-lg max-w-4xl mb-12" data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4 text-shadow-sm">Termly Activities</h3>
+      <ul class="list-disc list-inside space-y-4 text-gray-600">
+        <li>Term Opening and Closing Assemblies</li>
+        <li>Weekly Club Meetings (ICT, Chess, Debate, etc.)</li>
+        <li>Midterm Tests and Assessments</li>
+      </ul>
+    </div>
+    <div class="bg-green-50 p-8 rounded-lg shadow-lg max-w-4xl mb-12" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-shadow-sm">Announcements</h3>
+        <ul class="list-disc list-inside space-y-4 text-gray-600">
+          <li>Check back for updates on event dates.</li>
+          <li>Calls for volunteers will be posted here.</li>
+          <li>Note any special dress codes for school events.</li>
+        </ul>
+    </div>
+  </section>
+  
+</main>
+
+  
+ <section class="bg-turquoise text-white py-8">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between flex-wrap gap-4">
+
+      <!-- Left side -->
+      <div class="slide-in-left flex items-center space-x-6">
+        <h2 class="text-xl font-semibold text-shadow-xl">Get in touch</h2>
+        <a 
+          href="contact.html" 
+          class="bg-yellow text-white font-semibold px-4 py-2 rounded-full shadow hover:opacity-80 hover:scale-110 transition duration-300"
+        >
+          Contact Us
+        </a>
+      </div>
+
+    <!-- Right side -->
+      <div data class="slide-in-left flex items-center justify-between space-x-6">
+        <h2 class="text-xl font-semibold text-shadow-xl">Follow Us</h2>
+        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
+          <i class="fab fa-facebook text-white text-xl"></i>
+        </a>
+        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
+          <i class="fab fa-whatsapp text-white text-xl"></i>
+        </a>
+        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
+          <i class="fab fa-tiktok text-white text-xl"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="text-center bg-teal text-white py-3"> <p &copy; class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
+         &copy;  2025 Milestone Primary School. All rights reserved.
+      </p></footer>
+    
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>
