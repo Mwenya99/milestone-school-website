@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 1000, // Animation duration in milliseconds
     threshold: 0.1, // Trigger the animation when 10% of the element is visible
-    once: true,     // Whether animation should happen only once - while scrolling down
+    mirror: true,    
   });
 
 // Get the button
@@ -23,6 +23,14 @@ window.onscroll = function() {
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Wait for the entire page to load
+window.onload = function() {
+  const preloader = document.getElementById('preloader');
+  
+  // Add the 'hidden' class to fade out the preloader
+  preloader.classList.add('hidden');
+};
 
   // --- Your Newsletter Form Script ---
   const newsletterForm = document.getElementById('newsletter-form');

@@ -169,3 +169,38 @@ body.body-bg {
     right: 15px;
   }
 }
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* A solid white background */
+  z-index: 9999; /* Ensures it's on top of everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.75s ease, visibility 0.75s ease;
+}
+
+#spinner {
+  border: 8px solid #f3f3f3; /* Light grey circle */
+  border-top: 8px solid #06b6d4; /* Your turquoise color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* The class that JavaScript will add to hide the preloader */
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Keyframe animation for the spinning effect */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
