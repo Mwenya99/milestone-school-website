@@ -1,17 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Select all elements with the 'scroll-animate' class
-  const elementsToAnimate = document.querySelectorAll(".scroll-animate")})
-
-  AOS.init();
-  {
-    threshold: 0.1 // Trigger the animation when 10% of the element is visible
-  };
-
+  // Initialize the AOS (Animate on Scroll) library with all options in one object
   AOS.init({
-  duration: 1000 // Animation duration in milliseconds
+    duration: 1000, // Animation duration in milliseconds
+    threshold: 0.1, // Trigger the animation when 10% of the element is visible
+    mirror: true,    
+  });
+
+// Get the button
+// Get the button
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show button after scrolling down 100px
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to top smoothly when clicked
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-  // 5. Tell the observer to watch each of our animated elements
-  elementsToAnimate.forEach(el => {
-    observer.observe(el);
-  });
+// Wait for the entire page to load
+window.onload = function() {
+  const preloader = document.getElementById('preloader');
+  
+  // Add the 'hidden' class to fade out the preloader
+  preloader.classList.add('hidden');
+};
+
+  // --- Your Newsletter Form Script ---
+  const newsletterForm = document.getElementById('newsletter-form');
+  
+  // Check if the form actually exists on the page before adding a listener
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(event) {
+      // Prevent the form from submitting and reloading the page
+      event.preventDefault();
+
+      // Get the email input and the response message element
+      const emailInput = document.getElementById('email');
+      const responseMessage = document.getElementById('response-message');
+
+      // Check if the email field is not empty
+      if (emailInput.value) {
+        // Display a success message
+        responseMessage.textContent = 'Thank you for subscribing!';
+
+        // Clear the input field and message after 2 seconds
+        setTimeout(() => {
+          emailInput.value = '';
+          responseMessage.textContent = ''; 
+        }, 2000);
+      }
+    });
+  }
+});

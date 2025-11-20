@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - Milestone School</title>
+  <title>Contact - Milestone School</title>
   <script src="scripts.js" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./src/input.css">
@@ -87,33 +87,25 @@
     </div>
 
     <div data-aos="fade-up" data-aos-delay="200s" class="bg-white p-8 rounded-lg shadow-2xl">
-      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-shadow-sm">Send a Message</h2>
-      <form action="#" method="POST" class="space-y-4">
-        <div>
-          <label for="name" class="block text-gray-700 font-semibold mb-2">Your Name</label>
-          <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise" required>
-        </div>
-        <div>
-          <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
-          <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise" required>
-        </div>
-        <div>
-          <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-          <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise" required></textarea>
-        </div>
-        <div class="text-right">
-          <button type="submit" class="bg-turquoise text-white font-bold py-3 px-6 rounded-full hover:bg-opacity-80 transition duration-300 animate-pulse">
-            Send Message
-          </button>
-        </div>
-      </form>
+  <h2 class="text-2xl font-bold text-gray-800 mb-6 text-shadow-sm">Subscribe to Our Newsletter</h2>
+  <p class="text-gray-600 mb-6">Get the latest updates and offers delivered straight to your inbox.</p>
+  <form id="newsletter-form" class="space-y-4">
+    <div>
+      <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
+      <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise" required placeholder="you@example.com">
     </div>
-  </div>
-
+    <div class="text-right">
+      <button type="submit" class="bg-turquoise text-white text-shadow-sm font-bold py-3 px-6 rounded-full hover:bg-opacity-80 transition duration-300 animate-pulse">
+        Subscribe
+      </button>
+    </div>
+  </form>
+  <p id="response-message" class="mt-4 text-green-500 font-semibold"></p>
+</div>
   <section class="my-16">
     <h2 data-aos="fade-up" data-aos-delay="200s" class="text-3xl font-bold text-center text-gray-800 mb-8 text-shadow-sm">Visit Our Campus</h2>
     <div data-aos="fade-up" data-aos-delay="200s" class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61183.02341775878!2d28.4037552972983!3d-14.44211102925925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1942b08304918e77%3A0x7d01f7c4c77d612f!2sKabwe%2C%20Zambia!5e0!3m2!1sen!2sus!4v1668102324971!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483.00383355724483!2d28.437339777894856!3d-14.425395671221947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x196abbfd2e6e4ead%3A0xc9e5be8898b4c4c6!2sMilestone%20School%202!5e0!3m2!1sen!2szm!4v1760515169904!5m2!1sen!2szm" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 </main>
@@ -137,7 +129,7 @@
     <!-- Right side -->
       <div data class="slide-in-left flex items-center justify-between space-x-6">
         <h2 class="text-xl font-semibold text-shadow-sm">Follow Us</h2>
-        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
+        <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
           <i class="fab fa-facebook text-white text-xl"></i>
         </a>
         <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
@@ -154,9 +146,13 @@
 
 
 <footer class="text-center bg-teal text-white py-3"> <p &copy; class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
-         &copy;  2025 Milestone Primary School. All rights reserved.
+
+         &copy; Copyright <span id="date"></span> <a href="#" style="color: yellow"> Milestone School.  </a> All Rights Reserved.
       </p></footer>
     
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<button id="scrollTopBtn" title="Scroll to top">↑</button>
+
 </body>
 </html>
