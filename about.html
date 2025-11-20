@@ -4,121 +4,296 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Milestone School</title>
+ <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./src/input.css">
   <link href="./dist/output.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+ <!-- <link rel="stylesheet" href="tailwind.config.js"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body class="bg-gray-50 text-gray-800">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
 
+<body class="bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('assets/bck.jpg');">
+<div class="bg-black bg-opacity-70 h-full w-full rounded">
+
+  
   <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="index.html" class="flex items-center space-x-2">
-  <img src="assets/logo.png" alt="Milestone School Logo" class="h-10 w-auto object-contain">
-  <span class="text-2xl font-bold text-turquoise italic">Milestone School</span>
-</a>
-
-      <div class="hidden md:flex space-x-6 text-gray-600">
-  <a href="index.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Home</a>
-  
-  <a href="about.html" class="font-bold text-turquoise hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">About</a>
-  
+        <img src="assets/logo.png" alt="Milestone School Logo" class="slide-in-left h-10 w-auto object-contain">
+        <span class="slide-in-left text-2xl decoration-double font-bold text-gray-600 text-shadow-lg">Milestone School <br> </span>
+         </a>
+          
+      <div class="slide-in-left hidden md:flex space-x-6 text-gray-600 text-shadow-sm">
+  <a href="index.html" class="font-bold text-turquoise hover:text-turquoise hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Home</a>
   <a href="admissions.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Admissions</a>
   <a href="events.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Events</a>
   <a href="news.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">News</a>
   <a href="staff.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Staff</a>
   <a href="schedule.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Schedule</a>
   <a href="gallery.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Gallery</a>
-  <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact Us</a>
-</div>    
+  <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact</a>
+</div>
       <button class="md:hidden text-2xl">
         <i class="fas fa-bars"></i>
       </button>
+
     </nav>
   </header>
 
-  <main class="container mx-auto px-6 py-12">
-  <h1 class="text-4xl font-bold text-center text-turquoise mb-12">
+
+ <main class="container mx-auto px-6 py-10 mt-8 mb-12">
+  <h1 class="text-4xl font-bold text-center text-turquoise mb-6 text-shadow-sm" data-aos="fade-down">
     About Milestone School
   </h1>
+    
+    
+    <section id="about-content" class="py-10">
+      <div class="container mx-auto text-center px-6">
+        <h2 data-aos="fade-up" data-aos-delay="100" class="text-3xl font-bold mb-12 text-turquoise text-shadow-sm">
+          Our Foundation
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start pb-10">
+          
+          <div data-aos="fade-up" class="bg-white p-8 shadow-2xl rounded-lg transform transition-transform duration-300 hover:brightness-110 active:scale-95 text-left h-full">
+            <h2 class="text-2xl font-bold text-turquoise mb-6 text-shadow-sm transition duration-300 text-center">
+              Our History
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4 transition duration-300">
+              Founded in 2009, Milestone School began as a modest educational initiative with a clear vision: to create a place where every learner could grow academically, socially, and morally. Over the years, it has evolved into a respected institution in Kabwe, known for blending modern teaching methods with strong traditional values.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              From its early days, the school has upheld its guiding principle of “Humble Grooming for a Bright Future.” What started as a small community school has now become a vibrant learning center that nurtures curiosity, discipline, and creativity in every pupil.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-lg shadow-2xl transform transition-transform duration-300 hover:brightness-110 active:scale-95 text-left h-full">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300 text-center">
+              Our Mission
+            </h2>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              At Milestone School, our mission is to provide a holistic education that goes beyond academic success. We strive to cultivate intellectual curiosity, resilience, and empathy in our learners. Through a supportive environment and dedicated teachers, we aim to equip each child with the knowledge, skills, and character needed to thrive in an ever-changing world.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-lg shadow-2xl transform transition-transform duration-300 hover:brightness-110 active:scale-95 text-left h-full">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300 text-center">
+              Our Vision
+            </h2>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              We aspire to be a leading educational institution in Central Province, recognized for our commitment to excellence, innovative teaching practices, and unwavering dedication to the success and well-being of every learner. Our vision extends beyond the classroom — we seek to prepare students who will not only excel in their careers but also contribute meaningfully to society.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-lg shadow-2xl transform transition-transform duration-300 hover:brightness-110 active:scale-95 text-left h-full">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300 text-center">
+              Our Core Values
+            </h2>
+            <ul class="list-none space-y-4 text-gray-600 transition duration-300">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
+                <div><strong class="text-gray-700">Integrity:</strong> Upholding honesty and strong moral principles in all we do.</div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
+                <div><strong class="text-gray-700">Excellence:</strong> Striving for the highest standards in academics and personal growth.</div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
+                <div><strong class="text-gray-700">Respect:</strong> Fostering an environment of mutual understanding and kindness.</div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
+                <div><strong class="text-gray-700">Discipline:</strong> Encouraging responsibility, focus, and perseverance.</div>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
+                <div><strong class="text-gray-700">Innovation:</strong> Embracing creativity and technology to enhance learning.</div>
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="md:col-span-2 bg-white p-8 rounded-lg shadow-2xl max-w-3xl mx-auto transform transition-transform duration-300 hover:brightness-110 active:scale-95 text-left md:mt-8">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300 text-center">
+              Our Commitment
+            </h2>
+            <p class="text-gray-600 leading-relaxed transition duration-300 text-center">
+              Milestone School continues to build upon its legacy by integrating ICT education, arts, and character development into every level of learning. We take pride in shaping learners who are confident, capable, and ready to face the future with integrity and purpose.
+            </p>
+          </div>
+
+        </div> 
+        </div>
+    </section>
+
+    
+    <section id="academics-content" class="py-10">
+      <div class="container mx-auto text-center px-6">
+        <h2 data-aos="fade-up" data-aos-delay="100" class="text-3xl text-center font-bold mb-12 text-turquoise text-shadow-sm">
+          Academics
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start pb-10">
+          
+          <div data-aos="fade-up" class="bg-white text-center p-8 shadow-2xl rounded-lg transform transition-transform duration-300 hover:brightness-110 active:scale-95 h-full">
+            <div id = "overview" class="text-2xl font-bold text-turquoise mb-6 text-shadow-sm transition duration-300">
+              Overview of Curriculum
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4 transition duration-300">
+              At Milestone School, our curriculum blends the strengths of the **Zambian education system** with the internationally recognized **Cambridge framework**. This integration ensures that our learners receive a well-rounded education that meets both local and global standards.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Through the Cambridge curriculum, we promote inquiry-based learning, critical thinking, and problem-solving. Subjects are taught using practical, engaging methods that encourage students to explore concepts deeply rather than rely on memorization. Our teachers guide learners to think independently, communicate effectively, and apply their knowledge across different contexts.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              In the lower and middle grades, Cambridge principles are introduced gradually to strengthen core skills in English, Mathematics, and Science, while nurturing creativity and innovation through ICT, Art, and Global Perspectives. This approach builds a strong foundation for advanced studies and international opportunities.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              By integrating Cambridge learning with local values and cultural understanding, Milestone School ensures that every learner is prepared to thrive in a connected and competitive world, while staying grounded in the principles of discipline, humility, and excellence.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white text-center p-8 rounded-lg shadow-2xl transform transition-transform duration-300 hover:brightness-110 active:scale-95 h-full">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300">
+              Teaching Methodologies
+            </h2>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              At Milestone School, teaching goes beyond textbooks. We believe that effective education combines knowledge, curiosity, and character development. Our approach centers on active learning, where students participate through discussion, experimentation, and problem-solving rather than passive listening.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Teachers use a variety of modern methodologies such as project-based learning, inquiry-based instruction, and blended learning supported by technology. This ensures that lessons are interactive, relevant, and aligned with both Cambridge and national standards. ICT is integrated across subjects, helping learners build digital literacy and confidence in using technology responsibly.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              We also emphasize individualized attention, recognizing that every child learns at a different pace. Small class sizes allow teachers to monitor progress closely, provide constructive feedback, and adapt lessons to meet each learner’s needs.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Beyond academics, our teaching fosters communication, teamwork, creativity, and ethical awareness. Learners are encouraged to think critically, express ideas clearly, and apply what they learn to real-life situations.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Through this balanced and forward-looking approach, Milestone School prepares every learner to become an informed, capable, and compassionate member of society.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white text-center p-8 rounded-lg shadow-2xl transform transition-transform duration-300 hover:brightness-110 active:scale-95 h-full">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300">
+              Extracurricular Activities
+            </h2>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              At Milestone School, we believe that learning extends beyond the classroom. Our extracurricular program is designed to develop the whole child by nurturing talents, building confidence, and promoting teamwork.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Learners are encouraged to participate in a wide range of clubs and activities, including Music, Drama, Debate, Chess, and Art. These activities provide creative outlets and help learners build essential life skills such as leadership, communication, and critical thinking.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Sports play a key role in our extracurricular program, fostering discipline, fitness, and school spirit. Learners take part in athletics, football, netball, and other team sports that promote cooperation and healthy competition.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              We also organize educational trips, cultural days, and community outreach programs to broaden learners’ perspectives and instill a sense of responsibility toward their community and environment.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Through this vibrant mix of academic and extracurricular experiences, Milestone School ensures that every learner grows intellectually, socially, and emotionally—ready to face the world with confidence and purpose.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="bg-white text-center p-8 rounded-lg shadow-2xl transform transition-transform duration-300 hover:brightness-110 active:scale-95 h-full">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300">
+              Learning Resources and Facilities
+            </h2>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Milestone School provides a well-equipped and stimulating learning environment that supports both academic excellence and personal growth. Our facilities are thoughtfully designed to meet the diverse learning needs of every child and to promote creativity, collaboration, and discovery.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Our **ICT laboratory** is one of the school’s key features, offering learners hands-on experience with computers and modern digital tools that enhance their technological competence. Classrooms are spacious, well-lit, and equipped with up-to-date teaching materials that encourage interactive and engaging lessons.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              The **library** serves as a quiet space for research and independent study, stocked with a wide range of books and educational resources that complement the curriculum. Learners are encouraged to develop reading habits and explore topics of personal interest.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Beyond academics, our **science laboratory**, **art studio**, and **sports grounds** provide opportunities for practical learning, creative expression, and physical development.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Every learning space at Milestone School reflects our commitment to quality education and our belief that a supportive environment inspires learners to reach their full potential.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" class="md:col-span-2 bg-white text-center p-8 rounded-lg shadow-2xl max-w-3xl mx-auto transform transition-transform duration-300 hover:brightness-110 active:scale-95 md:mt-8">
+            <h2 class="text-2xl font-bold text-turquoise mb-4 text-shadow-sm transition duration-300">
+              Academic Achievements and Success Stories
+            </h2>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Milestone School stands as a center of academic distinction in Kabwe, known for producing disciplined, confident, and high-performing learners. Our academic success is the result of a well-structured curriculum, committed teachers, and a supportive learning environment that motivates every child to reach their full potential.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Our learners have consistently achieved top results in internal and external examinations, especially in core subjects such as Mathematics, English, and Science. Each year, Milestone pupils demonstrate outstanding performance in Cambridge Assessments and national progress evaluations, often ranking among the highest within the district.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              Beyond classroom achievements, Milestone learners regularly represent the school in academic competitions, spelling bees, and quiz challenges, where they have earned numerous awards for excellence and teamwork. These events not only showcase their intellectual strength but also their confidence and communication skills.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              We take pride in our graduates who have advanced to prestigious secondary schools, both locally and internationally, continuing to reflect the values instilled at Milestone—humility, discipline, and determination. Many have gone on to hold leadership positions and participate in community-driven projects inspired by their time at the school.
+            </p>
+            <p class="text-gray-600 leading-relaxed transition duration-300">
+              At Milestone School, success is not measured by results alone. It is reflected in the steady growth of every learner, the curiosity they develop, and the responsible choices they make as they prepare for the future. Our story is one of continuous progress, guided by the belief that every child can achieve greatness when given the right foundation.
+            </p>
+          </div>
+          
+        </div> 
+        </div>
+    </section>
+
+    <div data-aos="fade-up" data-aos-delay="100s" class="text-center py-10 mb-10">
+      <a href="admissions.html" class="inline-block bg-yellow text-gray-900 font-bold text-shadow-sm py-3 px-8 shadow-xl rounded-full hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out animate-pulse">
+        Join Us Now
+      </a>
+    </div>
+
+  </main>
   
-  <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Our History</h2>
-    <p class="text-gray-600 leading-relaxed mb-4">
-      Founded in 2009, Milestone School began as a modest educational initiative with a clear vision: to create a place where every learner could grow academically, socially, and morally. Over the years, it has evolved into a respected institution in Kabwe, known for blending modern teaching methods with strong traditional values.
-    </p>
-    <p class="text-gray-600 leading-relaxed">
-      From its early days, the school has upheld its guiding principle of “Humble Grooming for a Bright Future.” What started as a small community school has now become a vibrant learning center that nurtures curiosity, discipline, and creativity in every pupil.
-    </p>
-  </div>
+  <section class="bg-teal text-white py-8">
+    <div class="container mx-auto px-6">
+      <div class="flex items-center justify-between flex-wrap gap-4">
 
-  <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
-    <p class="text-gray-600 leading-relaxed">
-      At Milestone School, our mission is to provide a holistic education that goes beyond academic success. We strive to cultivate intellectual curiosity, resilience, and empathy in our learners. Through a supportive environment and dedicated teachers, we aim to equip each child with the knowledge, skills, and character needed to thrive in an ever-changing world.
-    </p>
-  </div>
-  
-  <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
-    <p class="text-gray-600 leading-relaxed">
-      We aspire to be a leading educational institution in Central Province, recognized for our commitment to excellence, innovative teaching practices, and unwavering dedication to the success and well-being of every learner. Our vision extends beyond the classroom — we seek to prepare students who will not only excel in their careers but also contribute meaningfully to society.
-    </p>
-  </div>
+        <div class="slide-in-left flex items-center space-x-6">
+          <h2 class="text-xl font-semibold text-shadow-sm">Get in touch</h2>
+          <a 
+            href="contact.html" 
+            class="bg-yellow text-white font-semibold px-4 py-2 rounded-full shadow hover:opacity-105 hover:scale-110 transition duration-300"
+          >
+            Contact Us
+          </a>
+        </div>
 
-  <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Core Values</h2>
-    <ul class="list-none space-y-4 text-gray-600">
-      <li class="flex items-start">
-        <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
-        <div>
-          <strong class="text-gray-700">Integrity:</strong> Upholding honesty and strong moral principles in all we do.
+      <div data class="slide-in-left flex items-center justify-between space-x-6">
+          <h2 class="text-xl font-semibold text-shadow-sm">Follow Us</h2>
+          <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="hover:opacity-105 hover:scale-110 transition duration-300">
+            <i class="fab fa-facebook text-white text-xl"></i>
+          </a>
+          <a href="#" target="_blank" class="hover:opacity-105 hover:scale-110 transition duration-300">
+            <i class="fab fa-whatsapp text-white text-xl"></i>
+          </a>
+          <a href="#" target="_blank" class="hover:opacity-105 hover:scale-110 transition duration-300">
+            <i class="fab fa-tiktok text-white text-xl"></i>
+          </a>
         </div>
-      </li>
-      <li class="flex items-start">
-        <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
-        <div>
-          <strong class="text-gray-700">Excellence:</strong> Striving for the highest standards in academics and personal growth.
-        </div>
-      </li>
-      <li class="flex items-start">
-        <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
-        <div>
-          <strong class="text-gray-700">Respect:</strong> Fostering an environment of mutual understanding and kindness.
-        </div>
-      </li>
-      <li class="flex items-start">
-        <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
-        <div>
-          <strong class="text-gray-700">Discipline:</strong> Encouraging responsibility, focus, and perseverance.
-        </div>
-      </li>
-      <li class="flex items-start">
-        <i class="fas fa-check-circle text-turquoise mt-1 mr-3"></i>
-        <div>
-          <strong class="text-gray-700">Innovation:</strong> Embracing creativity and technology to enhance learning.
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <div class="bg-white p-8 rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Commitment</h2>
-    <p class="text-gray-600 leading-relaxed">
-      Milestone School continues to build upon its legacy by integrating ICT education, arts, and character development into every level of learning. We take pride in shaping learners who are confident, capable, and ready to face the future with integrity and purpose.
-    </p>
-  </div>
-</main>
-
-  <section class="bg-turquoise text-white py-10">
-    <div class="container mx-auto text-center">
-      <div class="flex justify-center space-x-6 mb-6">
-        <a href="#" class="text-left text-2xl font-semibold">Follow Us On</a>
-        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 duration-300 "><i class="fab fa-facebook text-yellow text-3xl"></i></a>
-        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 duration-300 "><i class="fab fa-whatsapp text-yellow text-3xl"></i></a>
-        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 duration-300"><i class="fab fa-instagram text-yellow text-3xl"></i></a>
       </div>
     </div>
   </section>
-<footer class="text-center bg-teal text-white py-5">&copy; 2025 Milestone Primary School. All rights reserved.</footer>
+
+
+  <footer class="text-center bg-gray-200 text-white py-3"> 
+    <p &copy; class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
+      &copy; Copyright <span id="date"></span> 
+      <a href="#" style="color: yellow"> Milestone School. </a> 
+      All Rights Reserved.
+    </p>
+  </footer>
+    
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <button id="scrollTopBtn" title="Scroll to top">↑</button>
 </body>
 </html>

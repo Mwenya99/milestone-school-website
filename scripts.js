@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 1000, // Animation duration in milliseconds
     threshold: 0.1, // Trigger the animation when 10% of the element is visible
-    mirror: true,    
+    mirror: false,    
   });
 
 // Get the button
@@ -59,3 +59,38 @@ window.onload = function() {
     });
   }
 });
+
+// Set current year for copyright
+document.getElementById('date').textContent = new Date().getFullYear();
+
+// Hamburger Menu Toggle Logic
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuButton && mobileMenu) {
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    
+    // Optional: Change icon (bars <-> times)
+    const icon = mobileMenuButton.querySelector('i');
+    if (mobileMenu.classList.contains('hidden')) {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    } else {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    }
+  });
+
+  // Optional: Hide menu when a link is clicked (for single-page navigation)
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.querySelector('i').classList.remove('fa-times');
+        mobileMenuButton.querySelector('i').classList.add('fa-bars');
+      }
+    });
+  });
+};

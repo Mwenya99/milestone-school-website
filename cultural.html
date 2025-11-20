@@ -17,28 +17,40 @@
 
 </head>
 <main class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="assets/logo.png" alt="Milestone School Logo" class="slide-in-left h-10 w-auto object-contain">
+          <span class="slide-in-left text-2xl decoration-double font-bold text-gray-600 text-shadow-lg">Milestone School <br> </span>
+        </a>
+          
+        <div class="slide-in-left hidden md:flex space-x-6 text-gray-600 text-shadow-sm">
+          <a href="index.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Home</a>
+          <a href="admissions.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Admissions</a>
+          <a href="events.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Events</a>
+          <a href="news.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">News</a>
+          <a href="staff.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Staff</a>
+          <a href="schedule.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Schedule</a>
+          <a href="gallery.html" class="font-bold text-turquoise hover:text-turquoise hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Gallery</a>
+          <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact</a>
+        </div>
 
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center space-x-2">
-        <img src="assets/logo.png" alt="Milestone School Logo" class="slide-in-left h-10 w-auto object-contain">
-        <span class="slide-in-left text-2xl decoration-double font-bold text-gray-600 text-shadow-lg">Milestone School</span>
-      </a>
-  <div class="slide-in-left hidden md:flex space-x-6 text-gray-600 text-shadow-sm">
-  <a href="index.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Home</a>
-  <a href="admissions.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Admissions</a>
-  <a href="events.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Events</a>
-  <a href="news.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">News</a>
-  <a href="staff.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Staff</a>
-  <a href="schedule.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Schedule</a>
-  <a href="gallery.html" class="font-bold text-turquoise hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Gallery</a>
-  <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact</a>
-</div>
-      <button class="md:hidden text-2xl">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </header>
+        <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-600">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100 py-2">
+        <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
+        <a href="admissions.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Admissions</a>
+        <a href="events.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Events</a>
+        <a href="news.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">News</a>
+        <a href="staff.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Staff</a>
+        <a href="schedule.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Schedule</a>
+        <a href="gallery.html" class="block px-4 py-2 text-gray-700 font-bold hover:bg-gray-100">Gallery</a>
+        <a href="contact.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+      </div>
+    </header>
 
  <main class="container mx-auto px-6 py-10 mt-8 mb-12">
   <h1 class="text-4xl font-bold text-center text-turquoise mb-6 text-shadow-sm" data-aos="fade-down">
@@ -68,7 +80,7 @@
   </div>
  </main>
    
- <section class="bg-turquoise text-white py-8">
+ <section class="bg-teal text-white py-8">
   <div class="container mx-auto px-6">
     <div class="flex items-center justify-between flex-wrap gap-4">
 
@@ -102,7 +114,7 @@
 </section>
 
 
-<footer class="text-center bg-teal text-white py-3"> <p &copy; class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
+<footer class="text-center bg-gray-200 text-white py-3"> <p &copy; class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
 
          &copy; Copyright <span id="date"></span> <a href="#" style="color: yellow"> Milestone School.  </a> All Rights Reserved.
       </p></footer>
