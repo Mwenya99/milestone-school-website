@@ -96,103 +96,30 @@
         </div>
       </div>
     </div>
-
 <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-8 rounded-lg shadow-2xl">
-  <h2 class="text-2xl font-bold text-gray-800 mb-6 text-shadow-sm">Subscribe to Our Newsletter</h2>
-  <p class="text-gray-600 mb-6">Get the latest updates and offers delivered straight to your inbox.</p>
+  <h2 class="text-2xl font-bold text-gray-800 mb-4 text-shadow-sm">
+    Get in Touch
+  </h2>
 
-  <!-- Mailchimp Form -->
-  <form 
-    action="https://xxxxxx.usX.list-manage.com/subscribe/post?u=XXXXXXXX&id=XXXXXXXX" 
-    method="post" 
-    id="newsletter-form" 
-    name="mc-embedded-subscribe-form" 
-    target="_blank" 
-    novalidate 
-    class="space-y-4"
-  >
-    <div>
-      <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
-      <input type="email" value="" name="EMAIL" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise" placeholder="you@gmail.com" required>
-      <p id="email-error" class="text-red-500 text-sm mt-1 opacity-0 transition-opacity duration-300">Please enter a valid email address.</p>
-    </div>
-    <div class="text-right">
-      <button type="submit" name="subscribe" id="subscribe-btn" class="bg-turquoise text-white text-shadow-sm font-bold py-3 px-6 rounded-full hover:bg-opacity-80 transition duration-300 animate-pulse flex items-center justify-center gap-2">
-        <span id="btn-text">Subscribe</span>
-        <svg id="spinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-        </svg>
-      </button>
-    </div>
-  </form>
+  <p class="text-gray-600 mb-8">
+    Have a question or need more information? Reach out to us directly on WhatsApp and we will respond as soon as possible.
+  </p>
 
-  <p id="response-message" class="mt-4 font-semibold opacity-0 transition-opacity duration-500"></p>
+  <div class="text-center">
+    <a 
+      href="https://wa.me/260972712158?text=Hello%20Milestone%20School%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+      target="_blank"
+      class="inline-flex items-center justify-center gap-3 bg-green-500 text-white font-bold py-4 px-8 rounded-full hover:bg-green-600 transition duration-300 shadow-lg"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-6 w-6 fill-current">
+        <path d="M16.003 2.003c-7.732 0-14 6.268-14 14 0 2.47.648 4.88 1.878 7.005L2 30l7.164-1.85A13.94 13.94 0 0 0 16.003 30c7.732 0 14-6.268 14-14s-6.268-13.997-14-13.997zm0 25.497a11.46 11.46 0 0 1-5.86-1.61l-.42-.25-4.26 1.1 1.14-4.15-.27-.43a11.47 11.47 0 1 1 9.67 5.34zm6.34-8.66c-.35-.18-2.07-1.02-2.39-1.13-.32-.12-.56-.18-.79.18-.23.35-.9 1.13-1.1 1.36-.2.24-.4.27-.75.09-.35-.18-1.48-.55-2.82-1.75-1.04-.93-1.74-2.08-1.95-2.43-.2-.35-.02-.54.16-.72.16-.16.35-.4.53-.6.18-.2.23-.35.35-.58.12-.24.06-.45-.03-.63-.09-.18-.79-1.9-1.08-2.6-.28-.68-.57-.58-.79-.59l-.67-.01c-.23 0-.63.09-.96.45-.33.35-1.26 1.23-1.26 3s1.29 3.49 1.47 3.73c.18.24 2.54 3.88 6.16 5.44.86.37 1.53.59 2.05.76.86.27 1.64.23 2.26.14.69-.1 2.07-.85 2.36-1.67.29-.82.29-1.52.2-1.67-.09-.15-.32-.24-.67-.42z"/>
+      </svg>
+
+      <span>Contact Us on WhatsApp</span>
+    </a>
+  </div>
 </div>
 
-<script>
-  const form = document.getElementById('newsletter-form');
-  const emailInput = document.getElementById('email');
-  const emailError = document.getElementById('email-error');
-  const responseMessage = document.getElementById('response-message');
-  const btn = document.getElementById('subscribe-btn');
-  const spinner = document.getElementById('spinner');
-  const btnText = document.getElementById('btn-text');
-
-  // Live email validation
-  emailInput.addEventListener('input', () => {
-    const email = emailInput.value;
-    if (!email.includes('@') || email.length < 5) {
-      emailError.style.opacity = '1';
-    } else {
-      emailError.style.opacity = '0';
-    }
-  });
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const emailValue = emailInput.value;
-
-    if (!emailValue || !emailValue.includes('@')) {
-      emailError.style.opacity = '1';
-      return;
-    }
-
-    emailError.style.opacity = '0';
-
-    // Disable button & show spinner
-    btn.disabled = true;
-    spinner.classList.remove('hidden');
-    btnText.textContent = 'Subscribing...';
-    responseMessage.style.opacity = '0';
-
-    const url = form.action.replace('/post?', '/post-json?'); // AJAX-friendly
-    const data = new URLSearchParams(new FormData(form));
-
-    fetch(url + '&' + data.toString() + '&c=?', { method: 'GET', mode: 'no-cors' })
-      .then(() => {
-        responseMessage.textContent = 'Thank you for subscribing!';
-        responseMessage.className = 'mt-4 font-semibold text-green-500';
-        responseMessage.style.opacity = '1';
-        form.reset();
-
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          responseMessage.style.opacity = '0';
-        }, 5000);
-      })
-      .catch(() => {
-        responseMessage.textContent = 'Oops! Something went wrong. Please try again.';
-        responseMessage.className = 'mt-4 font-semibold text-red-500';
-        responseMessage.style.opacity = '1';
-      })
-      .finally(() => {
-        btn.disabled = false;
-        spinner.classList.add('hidden');
-        btnText.textContent = 'Subscribe';
-      });
-  });
-</script>
 
   <section class="my-16">
     <h2 data-aos="fade-up" data-aos-delay="200s" class="text-3xl font-bold text-center text-gray-800 mb-8 text-shadow-sm">Visit Our Campus</h2>
