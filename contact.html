@@ -84,7 +84,7 @@
         <i class="fas fa-envelope text-turquoise w-6 text-center mt-1 mr-4"></i>
         <div>
           <h3 class="font-bold text-gray-700 text-shadow-sm">Email</h3>
-          <p class="text-gray-600"><a href="mailto:info@milestoneschoolzm.com" class="hover:underline">info@milestoneschoolzm.com</a></p>
+          <p class="text-gray-600"><a href="mailto:info@milestoneschoolzm.com" class="hover:underline">milestoneschool.education@gmail.com</a></p>
         </div>
       </div>
       <div class="flex items-start">
@@ -92,27 +92,108 @@
         
         <div>
           <h3 class="font-bold text-gray-700 text-shadow-sm">Office Hours</h3>
-          <p class="text-gray-600">Monday to Friday: 07:30 – 16:30<br>Saturday: 08:00 – 12:00</p>
+          <p class="text-gray-600">Monday to Friday: 07:30 – 15:30<br>Saturday: 08:00 – 12:00<br>Sunday: Offices are closed</p>
         </div>
       </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-delay="200s" class="bg-white p-8 rounded-lg shadow-2xl">
+<div data-aos="fade-up" data-aos-delay="200" class="bg-white p-8 rounded-lg shadow-2xl">
   <h2 class="text-2xl font-bold text-gray-800 mb-6 text-shadow-sm">Subscribe to Our Newsletter</h2>
   <p class="text-gray-600 mb-6">Get the latest updates and offers delivered straight to your inbox.</p>
-  <form id="newsletter-form" class="space-y-4">
+
+  <!-- Mailchimp Form -->
+  <form 
+    action="https://xxxxxx.usX.list-manage.com/subscribe/post?u=XXXXXXXX&id=XXXXXXXX" 
+    method="post" 
+    id="newsletter-form" 
+    name="mc-embedded-subscribe-form" 
+    target="_blank" 
+    novalidate 
+    class="space-y-4"
+  >
     <div>
       <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
-      <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise" required placeholder="you@example.com">
+      <input type="email" value="" name="EMAIL" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquoise" placeholder="you@gmail.com" required>
+      <p id="email-error" class="text-red-500 text-sm mt-1 opacity-0 transition-opacity duration-300">Please enter a valid email address.</p>
     </div>
     <div class="text-right">
-      <button type="submit" class="bg-turquoise text-white text-shadow-sm font-bold py-3 px-6 rounded-full hover:bg-opacity-80 transition duration-300 animate-pulse">
-        Subscribe
+      <button type="submit" name="subscribe" id="subscribe-btn" class="bg-turquoise text-white text-shadow-sm font-bold py-3 px-6 rounded-full hover:bg-opacity-80 transition duration-300 animate-pulse flex items-center justify-center gap-2">
+        <span id="btn-text">Subscribe</span>
+        <svg id="spinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+        </svg>
       </button>
     </div>
   </form>
-  <p id="response-message" class="mt-4 text-green-500 font-semibold"></p>
+
+  <p id="response-message" class="mt-4 font-semibold opacity-0 transition-opacity duration-500"></p>
 </div>
+
+<script>
+  const form = document.getElementById('newsletter-form');
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
+  const responseMessage = document.getElementById('response-message');
+  const btn = document.getElementById('subscribe-btn');
+  const spinner = document.getElementById('spinner');
+  const btnText = document.getElementById('btn-text');
+
+  // Live email validation
+  emailInput.addEventListener('input', () => {
+    const email = emailInput.value;
+    if (!email.includes('@') || email.length < 5) {
+      emailError.style.opacity = '1';
+    } else {
+      emailError.style.opacity = '0';
+    }
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const emailValue = emailInput.value;
+
+    if (!emailValue || !emailValue.includes('@')) {
+      emailError.style.opacity = '1';
+      return;
+    }
+
+    emailError.style.opacity = '0';
+
+    // Disable button & show spinner
+    btn.disabled = true;
+    spinner.classList.remove('hidden');
+    btnText.textContent = 'Subscribing...';
+    responseMessage.style.opacity = '0';
+
+    const url = form.action.replace('/post?', '/post-json?'); // AJAX-friendly
+    const data = new URLSearchParams(new FormData(form));
+
+    fetch(url + '&' + data.toString() + '&c=?', { method: 'GET', mode: 'no-cors' })
+      .then(() => {
+        responseMessage.textContent = 'Thank you for subscribing!';
+        responseMessage.className = 'mt-4 font-semibold text-green-500';
+        responseMessage.style.opacity = '1';
+        form.reset();
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          responseMessage.style.opacity = '0';
+        }, 5000);
+      })
+      .catch(() => {
+        responseMessage.textContent = 'Oops! Something went wrong. Please try again.';
+        responseMessage.className = 'mt-4 font-semibold text-red-500';
+        responseMessage.style.opacity = '1';
+      })
+      .finally(() => {
+        btn.disabled = false;
+        spinner.classList.add('hidden');
+        btnText.textContent = 'Subscribe';
+      });
+  });
+</script>
+
   <section class="my-16">
     <h2 data-aos="fade-up" data-aos-delay="200s" class="text-3xl font-bold text-center text-gray-800 mb-8 text-shadow-sm">Visit Our Campus</h2>
     <div data-aos="fade-up" data-aos-delay="200s" class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
@@ -156,10 +237,15 @@
 </section>
 
 
-<footer class="text-center bg-gray-200 text-white py-3"> <p &copy; class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
+<footer class="text-center bg-gray-200 text-white py-3">
+   <p class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
+      &copy; Copyright <span id="date"></span> 
+      <a href="#" style="color: turquoise">Milestone School</a>. 
+      All Rights Reserved. Developed by 
+      <a href="https://wa.me/message/EARSZ7XJZEEXA1" target="_blank" style="color: turquoise">The Future</a>
+   </p>
+</footer>
 
-         &copy; Copyright <span id="date"></span> <a href="#" style="color: turquoise"> Milestone School.  </a> All Rights Reserved.
-      </p></footer>
     
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
