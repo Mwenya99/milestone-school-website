@@ -4,130 +4,327 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Graduation - Milestone School</title>
-   <script src="scripts.js" defer></script>
+  <script src="scripts.js" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./src/input.css">
   <link href="./dist/output.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
- <!-- <link rel="stylesheet" href="tailwind.config.js"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
 </head>
-<main class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/logo.png" alt="Milestone School Logo" class="slide-in-left h-10 w-auto object-contain">
-          <span class="slide-in-left text-2xl decoration-double font-bold text-gray-600 text-shadow-lg">Milestone School <br> </span>
+  <!-- Enhanced Header with Glass Morphism -->
+  <header class="sticky top-0 z-50 backdrop-blur-lg bg-white/90 supports-backdrop-blur:bg-white/95 shadow-soft">
+    <nav class="container mx-auto px-4 sm:px-6 py-3">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo with Animation -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+            <img src="assets/logo.png" alt="Milestone School Logo" 
+                 class="relative h-12 w-12 object-contain transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110">
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Milestone School
+            </span>
+            <span class="text-xs text-gray-500 tracking-wider font-medium">Humble Grooming for a Bright Future</span>
+          </div>
         </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-0.5">
+          <a href="index.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-home mr-1.8 text-xs"></i>
+            Home
+            <span class="nav-underline"></span>
+          </a>
           
-        <div class="slide-in-left hidden md:flex space-x-6 text-gray-600 text-shadow-sm">
-          <a href="index.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Home</a>
-          <a href="admissions.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Admissions</a>
-          <a href="events.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Events</a>
-          <a href="news.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">News</a>
-          <a href="staff.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Staff</a>
-          <a href="schedule.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Schedule</a>
-          <a href="gallery.html" class="font-bold text-turquoise hover:text-turquoise hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Gallery</a>
-          <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact</a>
+          <a href="about.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-info-circle mr-1.8 text-xs"></i>
+            About Us
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="academics.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-graduation-cap mr-1.8 text-xs"></i>
+            Academics
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="admissions.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-user-plus mr-1.8 text-xs"></i>
+            Admissions
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="events.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-calendar-alt mr-1.8 text-xs"></i>
+            Events
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="gallery.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-primary font-semibold transition-colors duration-300">
+            <i class="fas fa-images mr-1.8 text-xs"></i>
+            Gallery
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="staff.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-users mr-1.8 text-xs"></i>
+            Staff
+            <span class="nav-underline"></span>
+          </a>
+          
+          <!-- CTA Button -->
+          <a href="contact.html" 
+             class="ml-3 px-5 py-2 text-sm bg-gradient-to-r from-secondary to-orange-400 text-white font-semibold rounded-full 
+                    shadow-hard hover:shadow-glow transform hover:-translate-y-0.5 transition-all duration-300 
+                    hover:from-orange-400 hover:to-secondary">
+            Contact
+          </a>
         </div>
 
-        <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-600">
-          <i class="fas fa-bars"></i>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" 
+                class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+          <i class="fas fa-bars text-xl"></i>
         </button>
-      </nav>
-
-      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100 py-2">
-        <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
-        <a href="admissions.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Admissions</a>
-        <a href="events.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Events</a>
-        <a href="news.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">News</a>
-        <a href="staff.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Staff</a>
-        <a href="schedule.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Schedule</a>
-        <a href="gallery.html" class="block px-4 py-2 text-gray-700 font-bold hover:bg-gray-100">Gallery</a>
-        <a href="contact.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
       </div>
-    </header>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" 
+           class="lg:hidden hidden mt-4 py-4 px-6 bg-white rounded-xl shadow-hard border border-gray-100 animate-slide-up">
+        <div class="space-y-2">
+          <a href="index.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-home w-5 text-center"></i>
+            <span>Home</span>
+          </a>
+          <a href="about.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-info-circle w-5 text-center"></i>
+            <span>About Us</span>
+          </a>
+          <a href="academics.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-graduation-cap w-5 text-center"></i>
+            <span>Academics</span>
+          </a>
+          <a href="admissions.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-user-plus w-5 text-center"></i>
+            <span>Admissions</span>
+          </a>
+          <a href="events.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-calendar-alt w-5 text-center"></i>
+            <span>Events</span>
+          </a>
+          <a href="gallery.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-semibold transition-colors">
+            <i class="fas fa-images w-5 text-center"></i>
+            <span>Gallery</span>
+          </a>
+          <a href="staff.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-users w-5 text-center"></i>
+            <span>Staff</span>
+          </a>
+          <a href="contact.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-envelope w-5 text-center"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
- <main class="container mx-auto px-6 py-10 mt-8 mb-12">
-  <h1 class="text-4xl font-bold text-center text-turquoise mb-6 text-shadow-sm" data-aos="fade-down">
-    Graduation
-  </h1>
+  <style>
+  .nav-underline {
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-3/4;
+  }
 
-  <div class="text-center max-w-3xl mx-auto text-gray-600 mb-12" data-aos="fade-up">
-    <p>
-      The Milestone School Gallery captures the spirit, energy, and diversity of our learning community. Every photograph tells a story of growth, creativity, and shared experiences that make Milestone a truly special place to learn and grow.
-    </p>
-</div>
+  .nav-link.active .nav-underline {
+    @apply w-3/4;
+  }
 
-  <div class="flex flex-wrap justify-center gap-4 mb-12 text-shadow-sm" data-aos="fade-up" data-aos-delay="200">
-    <a href="gallery.html" class="bg-gray-200 text-gray-700 hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">All</a>
-    <a href="academics.html" class="bg-gray-200 text-gray-700 hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">Academic Life</a>
-    <a href="cultural.html" class="bg-gray-200 text-gray-700 hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">Events</a>
-    <a href="sports.html" class="bg-gray-200 text-gray-700 hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">Sports</a>
-    <a href="community.html" class="bg-gray-200 text-gray-700 hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">Community</a>
-    <a href="graduation.html" class="bg-turquoise text-white  hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">Graduation</a>
-    <a href="classroom.html" class="bg-gray-200 text-gray-700 hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">Classroom</a>
-    <a href="science.html" class="bg-gray-200 text-gray-700 hover:bg-turquoise hover:text-white py-2 px-5 rounded-full transition duration-300">Science</a>
-  </div>
+  .nav-link.active {
+    @apply text-primary font-semibold;
+  }
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  .mobile-nav-link.active {
+    @apply bg-primary/10 text-primary font-semibold;
+  }
+  </style>
+
+  <main class="container mx-auto px-4 sm:px-6 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <div class="mb-4" data-aos="fade-up">
+        <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+          Graduation Gallery
+        </span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-teal-500 to-accent bg-clip-text text-transparent" data-aos="fade-up" data-aos-delay="100">
+        Graduation Ceremonies
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto italic" data-aos="fade-up" data-aos-delay="200">
+        Celebrating achievements and milestones as learners transition to new chapters in their educational journey
+      </p>
+    </section>
     
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="300">
+      <a href="gallery.html" class="px-6 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-soft hover:shadow-hard border border-gray-200 hover:border-primary transform hover:scale-105 transition-all duration-300">
+        All
+      </a>
+      <a href="academics.html" class="px-6 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-soft hover:shadow-hard border border-gray-200 hover:border-primary transform hover:scale-105 transition-all duration-300">
+        Academic Life
+      </a>
+      <a href="cultural.html" class="px-6 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-soft hover:shadow-hard border border-gray-200 hover:border-primary transform hover:scale-105 transition-all duration-300">
+        Events
+      </a>
+      <a href="sports.html" class="px-6 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-soft hover:shadow-hard border border-gray-200 hover:border-primary transform hover:scale-105 transition-all duration-300">
+        Sports
+      </a>
+      <a href="community.html" class="px-6 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-soft hover:shadow-hard border border-gray-200 hover:border-primary transform hover:scale-105 transition-all duration-300">
+        Community
+      </a>
+      <a href="graduation.html" class="px-6 py-2 bg-gradient-to-r from-primary to-teal-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+        Graduation
+      </a>
+      <a href="classroom.html" class="px-6 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-soft hover:shadow-hard border border-gray-200 hover:border-primary transform hover:scale-105 transition-all duration-300">
+        Classroom
+      </a>
+      <a href="science.html" class="px-6 py-2 bg-white text-gray-700 font-semibold rounded-full shadow-soft hover:shadow-hard border border-gray-200 hover:border-primary transform hover:scale-105 transition-all duration-300">
+        Science
+      </a>
+    </div>
 
-  </div>
- </main>
-   
- <section class="bg-teal text-white py-8">
-  <div class="container mx-auto px-6">
-    <div class="flex items-center justify-between flex-wrap gap-4">
-
-      <!-- Left side -->
-      <div class="slide-in-left flex items-center space-x-6">
-        <h2 class="text-xl font-semibold text-shadow-sm">Get in touch</h2>
-        <a 
-          href="contact.html" 
-          class="bg-yellow text-white font-semibold px-4 py-2 rounded-full shadow hover:opacity-80 hover:scale-110 transition duration-300"
-        >
-          Contact Us
-        </a>
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
+      <a href="graduation.html" class="group block overflow-hidden rounded-2xl shadow-soft hover:shadow-hard transform transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative overflow-hidden">
+          <img src="assets/prom.jpg" alt="Graduation" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="font-semibold">Graduation Ceremony</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Quote Section -->
+    <section class="mt-16 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="900">
+      <div class="bg-gradient-to-br from-primary/10 via-teal-50 to-accent/10 p-10 rounded-2xl border-l-4 border-primary">
+        <blockquote class="italic text-xl md:text-2xl text-gray-700 font-medium">
+          "Every graduation is a milestone—a celebration of growth, achievement, and the bright futures that lie ahead."
+        </blockquote>
+        <p class="mt-4 text-gray-600 font-semibold">— Milestone School</p>
       </div>
+    </section>
+  </main>
 
-    <!-- Right side -->
-      <div data class="slide-in-left flex items-center justify-between space-x-6">
-        <h2 class="text-xl font-semibold text-shadow-sm">Follow Us</h2>
-        <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
-          <i class="fab fa-facebook text-white text-xl"></i>
-        </a>
-        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
-          <i class="fab fa-whatsapp text-white text-xl"></i>
-        </a>
-        <a href="#" target="_blank" class="hover:opacity-80 hover:scale-110 transition duration-300">
-          <i class="fab fa-tiktok text-white text-xl"></i>
-        </a>
+  <!-- Footer Section -->
+  <section class="bg-gradient-to-br from-primary via-teal-600 to-accent text-white py-16 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Contact Details -->
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-3">
+              <i class="fas fa-map-marker-alt text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold">Get in Touch</h2>
+          </div>
+          <div class="space-y-3 text-gray-100">
+            <p class="flex items-center">
+              <i class="fas fa-home mr-3 text-secondary"></i>
+              House No. 31 Holly Street, <span class="text-secondary font-semibold ml-1">Kabwe</span>, Zambia
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-phone mr-3 text-secondary"></i>
+              <span class="text-secondary font-semibold">+260 978 443 323</span>
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-secondary"></i>
+              <a href="mailto:milestoneschool.education@gmail.com" class="text-secondary hover:text-yellow-300 transition-colors underline">
+                milestoneschool.education@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-3">
+              <i class="fas fa-share-alt text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold">Follow Us</h2>
+          </div>
+          <p class="text-gray-100 mb-6">Stay connected with us on social media</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-facebook text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+            <a href="https://wa.me/260978443323" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-green-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-whatsapp text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-tiktok text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-instagram text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
+  <!-- Footer Bottom -->
+  <div class="bg-gray-900 py-6 border-t border-gray-700">
+    <div class="container mx-auto px-6">
+      <p class="text-center text-gray-300 text-sm font-medium">
+        &copy; <span id="date"></span> 
+        <a href="index.html" class="text-teal-400 font-semibold hover:text-teal-300 transition duration-300">Milestone School</a>. 
+        All Rights Reserved. Developed by 
+        <a href="https://wa.me/message/EARSZ7XJZEEXA1" target="_blank" class="text-teal-400 font-semibold hover:text-teal-300 transition duration-300">The Future</a>
+      </p>
     </div>
   </div>
-</section>
 
-
-<footer class="text-center bg-gray-200 text-white py-3">
-   <p class="slide-in-left text-sm text-gray-400 mb-0 sm:mb-0">
-      &copy; Copyright <span id="date"></span> 
-      <a href="#" style="color: turquoise">Milestone School</a>. 
-      All Rights Reserved. Developed by 
-      <a href="https://wa.me/message/EARSZ7XJZEEXA1" target="_blank" style="color: turquoise">The Future</a>
-   </p>
-</footer>
-
+  <!-- Back to Top Button -->
+  <button id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-primary to-teal-500 text-white rounded-full shadow-hard hover:shadow-glow hover:scale-110 transform transition-all duration-300 opacity-0 invisible flex items-center justify-center group">
+    <i class="fas fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
+  </button>
     
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-<button id="scrollTopBtn" title="Scroll to top">↑</button>
+</body>
+</html>
 
 </body>
 </html>

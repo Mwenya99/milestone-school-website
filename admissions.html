@@ -16,203 +16,395 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 </head>
-<body class="bg-gray-100 text-gray-1050">
-   <header class="bg-white shadow-md sticky top-0 z-50">
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/logo.png" alt="Milestone School Logo" class="slide-in-left h-10 w-auto object-contain">
-          <span class="slide-in-left text-2xl decoration-double font-bold text-gray-600 text-shadow-lg">Milestone School <br> </span>
+<body class="bg-gray-50">
+
+  <!-- Enhanced Header with Glass Morphism -->
+  <header class="sticky top-0 z-50 backdrop-blur-lg bg-white/90 supports-backdrop-blur:bg-white/95 shadow-soft">
+    <nav class="container mx-auto px-4 sm:px-6 py-3">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo with Animation -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+            <img src="assets/logo.png" alt="Milestone School Logo" 
+                 class="relative h-12 w-12 object-contain transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110">
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Milestone School
+            </span>
+            <span class="text-xs text-gray-500 tracking-wider font-medium">Humble Grooming for a Bright Future</span>
+          </div>
         </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-0.5">
+          <a href="index.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-home mr-1.8 text-xs"></i>
+            Home
+            <span class="nav-underline"></span>
+          </a>
           
-        <div class="slide-in-left hidden md:flex space-x-6 text-gray-600 text-shadow-sm">
-          <a href="index.html" class=" hover:text-turquoise font-semibold hover:scale-110 transition duration-300 ease-in-out">Home</a>
-          <a href="admissions.html" class="font-bold text-turquoise hover:text-turquoise hover:bg-yellow-400 hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Admissions</a>
-          <a href="events.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Events</a>
-          <a href="news.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">News</a>
-          <a href="staff.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Staff</a>
-          <a href="schedule.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Schedule</a>
-          <a href="gallery.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Gallery</a>
-          <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact</a>
+          <a href="about.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-info-circle mr-1.8 text-xs"></i>
+            About Us
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="academics.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-graduation-cap mr-1.8 text-xs"></i>
+            Academics
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="admissions.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-primary font-semibold transition-colors duration-300">
+            <i class="fas fa-user-plus mr-1.8 text-xs"></i>
+            Admissions
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="events.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-calendar-alt mr-1.8 text-xs"></i>
+            Events
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="gallery.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-images mr-1.8 text-xs"></i>
+            Gallery
+            <span class="nav-underline"></span>
+          </a>
+          
+          <a href="staff.html" 
+             class="nav-link group relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300">
+            <i class="fas fa-users mr-1.8 text-xs"></i>
+            Staff
+            <span class="nav-underline"></span>
+          </a>
+          
+          <!-- CTA Button -->
+          <a href="contact.html" 
+             class="ml-3 px-5 py-2 text-sm bg-gradient-to-r from-secondary to-orange-400 text-white font-semibold rounded-full 
+                    shadow-hard hover:shadow-glow transform hover:-translate-y-0.5 transition-all duration-300 
+                    hover:from-orange-400 hover:to-secondary">
+            Contact
+          </a>
         </div>
 
-        <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-600">
-          <i class="fas fa-bars"></i>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" 
+                class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+          <i class="fas fa-bars text-xl"></i>
         </button>
-      </nav>
-
-      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100 py-2">
-        <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
-        <a href="admissions.html" class="block px-4 py-2 text-gray-700 font-bold hover:bg-gray-100">Admissions</a>
-        <a href="events.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Events</a>
-        <a href="news.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">News</a>
-        <a href="staff.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Staff</a>
-        <a href="schedule.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Schedule</a>
-        <a href="gallery.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Gallery</a>
-        <a href="contact.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
       </div>
-    </header>
-
-  <main class="container mx-auto px-6 py-12">
-  <h1 data-aos="fade-up" data-aos-delay="100s" class="text-4xl font-bold text-center text-turquoise mb-6 text-shadow-sm">
-    Admissions
-  </h1>
-  
-  <div data-aos="fade-up" data-aos-delay="100s" class="bg-green-50 p-8 mb-12 rounded-lg shadow-2xl max-w-4xl mx-auto">
-    <h2 class="text-2xl font-bold text-gray-1050 mb-6 text-shadow-sm hover:opacity-105 hover:scale-105 transition duration-300">Our Process</h2>
-    <ol class="list-decimal list-inside space-y-4 text-gray-600 hover:opacity-105 hover:scale-105 transition duration-300">
-      <li>
-        <span class="font-semibold">Inquiry:</span> Contact our administration office to express interest and ask any preliminary questions. We're happy to help!
-      </li>
-      <li>
-        <span class="font-semibold">Application:</span> Download and complete the application form. Submit it to our office along with the required documents.
-      </li>
-      <li>
-        <span class="font-semibold">Assessment:</span> Prospective students will be invited for a friendly, age-appropriate assessment to understand their learning level.
-      </li>
-      <li>
-        <span class="font-semibold">Offer of Place:</span> Successful applicants will receive an official offer of admission from the school.
-      </li>
-      <li>
-        <span class="font-semibold">Important Dates and Deadlines:</span> Successful applicants will receive an official offer of admission from the school.
-      </li>
-    </ol>
-  </div>
-  
-  <div data-aos="fade-up" data-aos-delay="100s" class="bg-green-50 p-8 rounded-lg shadow-2xl mb-12 max-w-4xl mx-auto">
-    <h2 class="text-2xl font-bold text-gray-1050 mb-6 text-shadow-sm hover:opacity-105 hover:scale-105 transition duration-300">Required Documents</h2>
-    <ul class="list-disc list-inside space-y-2 text-gray-600 hover:opacity-105 hover:scale-105 transition duration-300">
-      <li>Completed Application Form</li>
-      <li>Copy of the child's birth certificate</li>
-      <li>Two recent passport-sized photographs</li>
-      <li>Copy of previous school reports (if applicable)</li>
-      <li>Copy of immunization records</li>
-    </ul>
-  </div>
-
-    <div data-aos="fade-up" data-aos-delay="100s" class="bg-green-50 p-8 rounded-lg shadow-2xl mb-12 max-w-4xl mx-auto">
-    <h2 class="text-2xl font-bold text-gray-1050 mb-6 text-shadow-sm hover:opacity-105 hover:scale-105 transition duration-300">Fee Structure and Payment Options</h2>
-    <ul class="list-disc list-inside space-y-2 text-gray-600 hover:opacity-105 hover:scale-105 transition duration-300">
-      <li>Completed Application Form</li>
-      <li>Copy of the child's birth certificate</li>
-      <li>Two recent passport-sized photographs</li>
-      <li>Copy of previous school reports (if applicable)</li>
-      <li>Copy of immunization records</li>
-    </ul>
-  </div>
-
-    <div data-aos="fade-up" data-aos-delay="100s" class="bg-green-50 p-8 rounded-lg shadow-2xl mb-12 max-w-4xl mx-auto">
-    <h2 class="text-2xl font-bold text-gray-1050 mb-6 text-shadow-sm hover:opacity-105 hover:scale-105 transition duration-300">FAQs</h2>
-    <ul class="list-disc list-inside space-y-2 text-gray-600 hover:opacity-105 hover:scale-105 transition duration-300">
-      <li>What curriculum do you follow?</li>
-      <li>What subjects are offered?</li>
-      <li>How is student progress assessed?</li>
-      <li>Do you offer support for students with special learning needs?</li>
-      <li>What are the school hours?</li>
-    </ul>
-  </div>
-
-  <div data-aos="fade-up" data-aos-delay="100s" class="text-center mb-10">
-    <h2 class="text-2xl font-bold text-gray-1050 mb-4 text-shadow-sm">Ready to Join Us?</h2>
-    <a href="assets/miletone-application-form.pdf" download class="inline-block bg-yellow border-2s border-turquoise text-gray-900 font-bold py-3 px-8 shadow-xl rounded-full hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">
-      Download Application Form
-    </a>
-  </div>
-</main>
-
- <section class="bg-teal text-white py-12">
-  <div class="container mx-auto px-6">
-
-    <!-- Top Section: Contact & Newsletter -->
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-
-      <!-- Contact -->
-      <div class="text-center md:text-left">
-        <h2 class="text-xl font-semibold text-shadow-sm mb-2">Get in touch</h2>
-        <p>House No. 31 Holly Street, Kabwe, Zambia</p>
-        <p>Phone: +260 978 443 323</p>
-        <p>Email: <a href="mailto:milestoneschool.education@gmail.com" class="underline text-yellow-400">milestoneschool.education@gmail.com</a></p>
-        <a href="contact.html" class="mt-3 inline-block bg-yellow text-white font-semibold px-4 py-2 rounded-full shadow hover:opacity-90 hover:scale-105 transition duration-300">Contact Us</a>
-      </div>
-
-      <!-- Newsletter Signup -->
-      <div class="text-center md:text-right">
-        <h2 class="text-xl font-semibold text-shadow-sm mb-2">Subscribe to our Newsletter</h2>
-        <form id="footer-newsletter" class="flex justify-center md:justify-end gap-2 flex-wrap">
-          <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-          <button type="submit" class="bg-yellow text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition">Subscribe</button>
-        </form>
-      </div>
-
-    </div>
-
-    <!-- Middle Section: Quick Links & Social -->
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-
-      <!-- Quick Links -->
-      <div class="text-center md:text-left">
-        <h2 class="text-xl font-semibold text-shadow-sm mb-2">Quick Links</h2>
-        <div class="flex flex-wrap gap-4 justify-center md:justify-start text-gray-100">
-          <a href="index.html" class="hover:text-yellow-400 transition">Home</a>
-          <a href="admissions.html" class="hover:text-yellow-400 transition">Admissions</a>
-          <a href="staff.html" class="hover:text-yellow-400 transition">Staff</a>
-          <a href="events.html" class="hover:text-yellow-400 transition">Events</a>
-          <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
-        </div>
-      </div>
-
-      <!-- Social Links -->
-      <div class="text-center md:text-right">
-        <h2 class="text-xl font-semibold text-shadow-sm mb-2">Follow Us</h2>
-        <div class="flex justify-center md:justify-end gap-4">
-          <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="hover:opacity-90 hover:scale-110 transition duration-300">
-            <i class="fab fa-facebook text-white text-2xl"></i>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" 
+           class="lg:hidden hidden mt-4 py-4 px-6 bg-white rounded-xl shadow-hard border border-gray-100 animate-slide-up">
+        <div class="space-y-2">
+          <a href="index.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-home w-5 text-center"></i>
+            <span>Home</span>
           </a>
-          <a href="#" target="_blank" class="hover:opacity-90 hover:scale-110 transition duration-300">
-            <i class="fab fa-whatsapp text-white text-2xl"></i>
+          <a href="about.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-info-circle w-5 text-center"></i>
+            <span>About Us</span>
           </a>
-          <a href="#" target="_blank" class="hover:opacity-90 hover:scale-110 transition duration-300">
-            <i class="fab fa-tiktok text-white text-2xl"></i>
+          <a href="academics.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-graduation-cap w-5 text-center"></i>
+            <span>Academics</span>
           </a>
-          <a href="#" target="_blank" class="hover:opacity-90 hover:scale-110 transition duration-300">
-            <i class="fab fa-instagram text-white text-2xl"></i>
+          <a href="admissions.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-semibold transition-colors">
+            <i class="fas fa-user-plus w-5 text-center"></i>
+            <span>Admissions</span>
+          </a>
+          <a href="events.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-calendar-alt w-5 text-center"></i>
+            <span>Events</span>
+          </a>
+          <a href="gallery.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-images w-5 text-center"></i>
+            <span>Gallery</span>
+          </a>
+          <a href="staff.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-users w-5 text-center"></i>
+            <span>Staff</span>
+          </a>
+          <a href="contact.html" 
+             class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-envelope w-5 text-center"></i>
+            <span>Contact</span>
           </a>
         </div>
       </div>
+    </nav>
+  </header>
 
-    </div>
+  <style>
+  .nav-underline {
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-3/4;
+  }
 
-    <!-- Bottom Section: Accreditation & Copyright -->
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-gray-400 pt-6">
+  .nav-link.active .nav-underline {
+    @apply w-3/4;
+  }
 
-      <!-- Accreditation Logos -->
-      <div class="flex justify-center md:justify-start gap-4 mb-4 md:mb-0">
-        <img src="assets/ecz-logo.png" alt="Examination Council of Zambia" class="h-10">
-        <img src="assets/ministry-logo.png" alt="Ministry of Education" class="h-10">
+  .nav-link.active {
+    @apply text-primary font-semibold;
+  }
+
+  .mobile-nav-link.active {
+    @apply bg-primary/10 text-primary font-semibold;
+  }
+  </style>
+
+  <main class="container mx-auto px-4 sm:px-6 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <div class="mb-4" data-aos="fade-up">
+        <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+          Admissions
+        </span>
       </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-teal-500 to-accent bg-clip-text text-transparent" data-aos="fade-up" data-aos-delay="100">
+        Join Milestone School
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        Begin your journey towards excellence in education
+      </p>
+    </section>
 
+    <!-- Admissions Process -->
+    <section class="py-10">
+      <div class="max-w-4xl mx-auto">
+        <div data-aos="fade-up" data-aos-delay="100" class="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-hard transform transition-all duration-500 hover:-translate-y-2 mb-8 border border-gray-100">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-primary to-teal-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-clipboard-list text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800">Our Admission Process</h2>
+          </div>
+          <ol class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <span class="flex-shrink-0 w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold mr-4 mt-1">1</span>
+              <div>
+                <span class="font-semibold text-primary">Inquiry:</span> Contact our administration office to express interest and ask any preliminary questions. We're happy to help!
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="flex-shrink-0 w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold mr-4 mt-1">2</span>
+              <div>
+                <span class="font-semibold text-primary">Application:</span> Download and complete the application form. Submit it to our office along with the required documents.
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="flex-shrink-0 w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold mr-4 mt-1">3</span>
+              <div>
+                <span class="font-semibold text-primary">Assessment:</span> Prospective students will be invited for a friendly, age-appropriate assessment to understand their learning level.
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="flex-shrink-0 w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold mr-4 mt-1">4</span>
+              <div>
+                <span class="font-semibold text-primary">Offer of Place:</span> Successful applicants will receive an official offer of admission from the school.
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="flex-shrink-0 w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold mr-4 mt-1">5</span>
+              <div>
+                <span class="font-semibold text-primary">Enrollment:</span> Complete enrollment by submitting all required documents and fees.
+              </div>
+            </li>
+          </ol>
+        </div>
 
+        <div data-aos="fade-up" data-aos-delay="200" class="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-hard transform transition-all duration-500 hover:-translate-y-2 mb-8 border border-gray-100">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-secondary to-orange-400 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-file-alt text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800">Required Documents</h2>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 mt-1 mr-3 text-lg"></i>
+              <span>Completed Application Form</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 mt-1 mr-3 text-lg"></i>
+              <span>Copy of the child's birth certificate</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 mt-1 mr-3 text-lg"></i>
+              <span>Two recent passport-sized photographs</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 mt-1 mr-3 text-lg"></i>
+              <span>Copy of previous school reports (if applicable)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-teal-500 mt-1 mr-3 text-lg"></i>
+              <span>Copy of immunization records</span>
+            </li>
+          </ul>
+        </div>
 
+        <div data-aos="fade-up" data-aos-delay="300" class="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-hard transform transition-all duration-500 hover:-translate-y-2 mb-8 border border-gray-100">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-accent to-teal-400 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-dollar-sign text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800">Fee Structure and Payment Options</h2>
+          </div>
+          <p class="text-gray-700 mb-4">For detailed information about our fee structure and flexible payment options, please contact our administration office. We offer various payment plans to accommodate different family needs.</p>
+          <p class="text-gray-700">Contact us at <a href="mailto:milestoneschool.education@gmail.com" class="text-primary font-semibold hover:underline">milestoneschool.education@gmail.com</a> or call <span class="text-primary font-semibold">+260 978 443 323</span> for more information.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="400" class="group bg-gradient-to-br from-primary via-teal-500 to-accent text-white p-8 rounded-2xl shadow-hard transform transition-all duration-500 hover:-translate-y-2 hover:shadow-glow mb-8">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-question-circle text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+          </div>
+          <ul class="space-y-3 text-white/90">
+            <li class="flex items-start">
+              <i class="fas fa-chevron-right text-secondary mt-1 mr-3"></i>
+              <span><strong>What curriculum do you follow?</strong> We blend the Zambian education system with the Cambridge framework.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-chevron-right text-secondary mt-1 mr-3"></i>
+              <span><strong>What subjects are offered?</strong> We offer a comprehensive range including English, Mathematics, Science, ICT, Arts, and more.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-chevron-right text-secondary mt-1 mr-3"></i>
+              <span><strong>How is student progress assessed?</strong> Through continuous assessment, tests, and Cambridge evaluations.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-chevron-right text-secondary mt-1 mr-3"></i>
+              <span><strong>Do you offer support for students with special learning needs?</strong> Yes, we provide individualized support and accommodations.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-chevron-right text-secondary mt-1 mr-3"></i>
+              <span><strong>What are the school hours?</strong> Regular school hours are from 7:30 AM to 2:30 PM, Monday to Friday.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="500" class="text-center bg-white p-10 rounded-2xl shadow-soft border border-gray-100">
+          <div class="w-20 h-20 bg-gradient-to-br from-secondary to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-download text-white text-3xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Join Us?</h2>
+          <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Download our application form and begin your journey with Milestone School today.</p>
+          <a href="assets/miletone-application-form.pdf" target="_blank" download class="group/btn inline-flex items-center px-8 py-4 bg-gradient-to-r from-secondary to-orange-400 text-white font-bold rounded-full shadow-hard hover:shadow-glow transform hover:scale-105 transition-all duration-300">
+            <i class="fas fa-file-pdf mr-2"></i>
+            Download Application Form
+            <i class="fas fa-arrow-down ml-2 group-hover/btn:translate-y-1 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <section class="bg-gradient-to-br from-primary via-teal-600 to-accent text-white py-16 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Contact Details -->
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-3">
+              <i class="fas fa-map-marker-alt text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold">Get in Touch</h2>
+          </div>
+          <div class="space-y-3 text-gray-100">
+            <p class="flex items-center">
+              <i class="fas fa-home mr-3 text-secondary"></i>
+              House No. 31 Holly Street, <span class="text-secondary font-semibold ml-1">Kabwe</span>, Zambia
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-phone mr-3 text-secondary"></i>
+              <span class="text-secondary font-semibold">+260 978 443 323</span>
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-secondary"></i>
+              <a href="mailto:milestoneschool.education@gmail.com" class="text-secondary hover:text-yellow-300 transition-colors underline">
+                milestoneschool.education@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-3">
+              <i class="fas fa-share-alt text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold">Follow Us</h2>
+          </div>
+          <p class="text-gray-100 mb-6">Stay connected with us on social media</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-facebook text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+            <a href="https://wa.me/260978443323" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-green-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-whatsapp text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-tiktok text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+              <i class="fab fa-instagram text-white text-2xl group-hover:scale-110 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Bottom -->
+  <div class="bg-gray-900 py-6 border-t border-gray-700">
+    <div class="container mx-auto px-6">
+      <p class="text-center text-gray-300 text-sm font-medium">
+        &copy; <span id="date"></span> 
+        <a href="index.html" class="text-teal-400 font-semibold hover:text-teal-300 transition duration-300">Milestone School</a>. 
+        All Rights Reserved. Developed by 
+        <a href="https://wa.me/message/EARSZ7XJZEEXA1" target="_blank" class="text-teal-400 font-semibold hover:text-teal-300 transition duration-300">The Future</a>
+      </p>
     </div>
   </div>
-</section>
 
-<!-- Back to Top Button -->
-<button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-yellow text-white px-4 py-2 rounded-full shadow-lg hover:opacity-90 hover:scale-110 transition duration-300">↑ Top</button>
-
-<!-- Footer Bottom -->
-<div class="bg-gray-800 py-4">
-  <p class="text-center text-gray-300 text-sm font-medium">
-    &copy; <span id="date"></span> 
-    <a href="index.html" class="text-turquoise font-semibold transition duration-300">Milestone School</a>. 
-    All Rights Reserved. Developed by 
-    <a href="https://wa.me/message/EARSZ7XJZEEXA1" target="_blank" class="text-turquoise font-semibold transition duration-300">The Future</a>
-  </p>
-</div>
-
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<button id="scrollTopBtn" title="Scroll to top">↑</button>
+  <!-- Back to Top Button -->
+  <button id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-primary to-teal-500 text-white rounded-full shadow-hard hover:shadow-glow hover:scale-110 transform transition-all duration-300 opacity-0 invisible flex items-center justify-center group">
+    <i class="fas fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
+  </button>
+    
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
