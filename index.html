@@ -768,5 +768,30 @@
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
+
+  <script>
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+
+    const updateCounter = () => {
+      const increment = Math.ceil(target / 200);
+
+      if (count < target) {
+        count += increment;
+        if (count > target) count = target;
+        counter.textContent = `${count}+`;
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = `${target}+`;
+      }
+    };
+
+    updateCounter();
+  });
+</script>
+
 </body>
 </html>

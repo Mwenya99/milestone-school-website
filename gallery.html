@@ -16,6 +16,29 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 </head>
+
+<script>
+  const filters = document.querySelectorAll('.gallery-filter');
+  const sections = document.querySelectorAll('.gallery-section');
+
+  filters.forEach(button => {
+    button.addEventListener('click', () => {
+      filters.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const filter = button.dataset.filter;
+
+      sections.forEach(section => {
+        if (filter === 'all' || section.dataset.category === filter) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
 <body class="bg-gray-50">
 
   <!-- Enhanced Header with Glass Morphism -->
