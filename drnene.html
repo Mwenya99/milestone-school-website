@@ -8,132 +8,164 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <link rel="stylesheet" href="./src/input.css">
   <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+</head> 
 
-<body class="bg-cover bg-center bg-no-repeat bg-fixed font-poppins text-gray-800" style="background-image: url('assets/staff.jpg');">
-<div class="bg-black bg-opacity-50 min-h-screen w-full">
-
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
+<body class="bg-gray-50 font-poppins text-gray-800 antialiased">
+  <!-- Hero/Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 border-b border-gray-100 shadow-sm">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center space-x-2">
-        <img src="assets/logo.png" alt="Milestone School Logo" class="slide-in-left h-10 w-auto object-contain">
-        <span class="slide-in-left text-2xl font-bold text-gray-600 text-shadow-lg">Milestone School</span>
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Milestone School Home">
+        <img src="assets/logo.png" alt="Milestone School logo" class="h-10 w-auto object-contain drop-shadow-sm">
+        <span class="text-2xl font-extrabold tracking-tight text-gray-700 group-hover:text-primary transition-colors">Milestone School</span>
       </a>
 
-      <div class="slide-in-left hidden md:flex space-x-6 text-gray-600 text-shadow-sm">
-        <a href="index.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Home</a>
-        <a href="admissions.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Admissions</a>
-        <a href="events.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Events</a>
-        <a href="news.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">News</a>
-        <a href="staff.html" class="font-bold text-turquoise hover:text-turquoise hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Staff</a>
-        <a href="schedule.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Schedule</a>
-        <a href="gallery.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Gallery</a>
-        <a href="contact.html" class="hover:text-turquoise font-semibold hover:bg-yellow-400 hover:scale-110 transition duration-300 ease-in-out">Contact</a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+        <a href="admissions.html" class="text-gray-600 hover:text-primary transition-colors">Admissions</a>
+        <a href="events.html" class="text-gray-600 hover:text-primary transition-colors">Events</a>
+        <a href="news.html" class="text-gray-600 hover:text-primary transition-colors">News</a>
+        <a href="staff.html" class="text-primary font-semibold">Staff</a>
+        <a href="schedule.html" class="text-gray-600 hover:text-primary transition-colors">Schedule</a>
+        <a href="gallery.html" class="text-gray-600 hover:text-primary transition-colors">Gallery</a>
+        <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
       </div>
 
-      <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-600">
+      <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-700" aria-label="Open menu">
         <i class="fas fa-bars"></i>
       </button>
     </nav>
 
-    <div id="mobile-menu" class="slide-in-right hidden md:hidden bg-white shadow-lg border-t border-gray-100 py-2">
-      <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
-      <a href="admissions.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Admissions</a>
-      <a href="events.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Events</a>
-      <a href="news.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">News</a>
-      <a href="staff.html" class="block px-4 py-2 text-gray-700 font-bold hover:bg-gray-100">Staff</a>
-      <a href="schedule.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Schedule</a>
-      <a href="gallery.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Gallery</a>
-      <a href="contact.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100 py-2">
+      <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10">Home</a>
+      <a href="admissions.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10">Admissions</a>
+      <a href="events.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10">Events</a>
+      <a href="news.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10">News</a>
+      <a href="staff.html" class="block px-4 py-2 text-gray-900 font-semibold hover:bg-primary/10">Staff</a>
+      <a href="schedule.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10">Schedule</a>
+      <a href="gallery.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10">Gallery</a>
+      <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10">Contact</a>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container mx-auto px-6 py-12">
-    <section class="max-w-4xl mx-auto bg-white bg-opacity-90 p-10 rounded-lg shadow-lg">
-      <div class="text-center mb-10">
-        <img src="assets/Dr. Nene.jpg" alt="Dr. Miranda Nene" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Dr. Miranda Mutinta Nene</h1>
-        <p class="text-turquoise font-semibold mb-2">School Director</p>
-        <p class="text-gray-700">Contact: +260 978 443 323</p>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src="assets/staff.jpg" alt="Milestone staff background" class="h-full w-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-white"></div>
+    </div>
+    <div class="container mx-auto px-6 py-16 md:py-24">
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-4 mb-6" data-aos="fade-down">
+          <img src="assets/Dr. Nene.jpg" alt="Portrait of Dr. Miranda Nene" class="h-20 w-20 rounded-2xl object-cover shadow-lg ring-4 ring-white/70">
+          <div>
+            <p class="text-sm uppercase tracking-widest text-primary font-semibold">School Director</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-gray-800">Dr. Miranda Mutinta Nene</h1>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 text-gray-600" data-aos="fade-up" data-aos-delay="100">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"><i class="fas fa-phone text-primary"></i> +260 978 443 323</span>
+          <a href="mailto:milestoneschool.education@gmail.com" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"><i class="fas fa-envelope text-primary"></i> Email</a>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <hr class="my-8 border-gray-300">
+  <!-- Content -->
+  <main class="container mx-auto px-6 pb-16">
+    <section class="grid lg:grid-cols-3 gap-8">
+      <!-- Left: About/Profile -->
+      <article class="lg:col-span-2 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-8 md:p-10" data-aos="fade-up" data-aos-delay="50">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">School Profile 2023 - 2024</h2>
+        <p class="mb-4 leading-relaxed">
+          Milestone School is a mixed Nursery and Primary school located in Luangwa. The school is built on the vision of creating a strong and sustainable center of learning that offers affordable and high quality education to the community. The school opened in January 2008 and now has more than thirty-five members of staff. The teaching staff is highly qualified and experienced.
+        </p>
+        <p class="mb-8 text-gray-700">General Contact: <span class="font-semibold">+260 979 867 508</span></p>
 
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">School Profile 2023 - 2024</h2>
-      <p class="mb-4 leading-relaxed">
-        Milestone School is a mixed Nursery and Primary school located in Luangwa. The school is built on the vision of creating a strong and sustainable center of learning that offers affordable and high quality education to the community. The school opened in January 2008 and now has more than thirty-five members of staff. The teaching staff is highly qualified and experienced.
-      </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 ring-1 ring-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Our Vision</h3>
+            <p class="text-gray-700">A community where every child can access quality education for sustainable development.</p>
+          </div>
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 ring-1 ring-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="150">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Our Mission</h3>
+            <p class="text-gray-700">We aim to support learners in enjoying their right to education by providing comprehensive Nursery and Primary learning in a safe and secure environment.</p>
+          </div>
+        </div>
 
-      <p class="mb-4">Contact: +260 979 867 508</p>
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 ring-1 ring-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Accreditation</h3>
+            <p class="text-gray-700">The school is fully registered with the Ministry of Education and is also an approved examination center by the Examination Council of Zambia.</p>
+          </div>
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 ring-1 ring-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="250">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Where We Want to Be</h3>
+            <p class="text-gray-700">A second campus is under construction and is expected to be complete by December 2024.</p>
+          </div>
+        </div>
 
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Our Vision</h3>
-      <p class="mb-4 leading-relaxed">
-        A community where every child can access quality education for sustainable development.
-      </p>
+        <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Programs and Extra-Curricular</h3>
+          <p class="text-gray-700">We provide strong literacy and numeracy programs along with science and student wellbeing. Staff take part in continued professional growth and the school uses clear assessment and reporting. Students enjoy sports, art, media, STEAM, soccer, volleyball, netball, and ICT.</p>
+        </div>
 
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Our Mission</h3>
-      <p class="mb-4 leading-relaxed">
-        We aim to support learners in enjoying their right to education by providing comprehensive Nursery and Primary learning in a safe and secure environment.
-      </p>
+        <div class="mt-8" data-aos="fade-up" data-aos-delay="350">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Enrolment</h3>
+          <p class="text-gray-700">The school began in 2008 with only six nursery children. It now offers learning from Nursery to Primary Seven and supports more than four hundred learners.</p>
+        </div>
 
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Address</h3>
-      <p class="mb-4 leading-relaxed">
-        House No. 31 Holly Street, Kabwe, Zambia <br>
-        Cell: +260 978 443 323 <br>
-        Email: <a href="mailto:milestoneschool.education@gmail.com" class="text-turquoise underline">milestoneschool.education@gmail.com</a>
-      </p>
+        <hr class="my-10 border-gray-200">
 
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Accreditation</h3>
-      <p class="mb-4 leading-relaxed">
-        The school is fully registered with the Ministry of Education and is also an approved examination center by the Examination Council of Zambia.
-      </p>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Director Profile</h2>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Miranda Nene: The Mind Behind Milestone School</h3>
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Miranda Mutinta Nene is an accomplished educator with more than a decade of experience. She holds a Bachelor of Education and a Master of Education from Mulungushi University. Over sixteen years, she has managed Milestone School and worked with several organizations, including serving as a teacher with the Ministry of Education.
+        </p>
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Her skills include team leadership, attention to detail, problem-solving, and strong communication. She has guided the school in community efforts such as support to Kakama and Buyantashi Primary Schools. The school has awarded bursaries to learners and has helped students in universities and secondary schools.
+        </p>
+        <p class="mb-2 leading-relaxed text-gray-700">
+          Miranda also served as chairperson for the Kabwe Chapter of Ladies Circle Zambia, participating in humanitarian programs.
+        </p>
+      </article>
 
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Our Values</h3>
-      <ul class="list-disc list-inside mb-4 leading-relaxed">
-        <li>God-fearing</li>
-        <li>Love, care, compassion for learners</li>
-        <li>Excellence for all</li>
-        <li>Discipline</li>
-        <li>Respect for human dignity</li>
-        <li>Accountability</li>
-        <li>Team work</li>
-      </ul>
+      <!-- Right: Quick Facts / Contact Card -->
+      <aside class="space-y-6">
+        <div class="bg-gradient-to-br from-primary to-teal-600 text-white rounded-2xl shadow-md p-6" data-aos="fade-left">
+          <h3 class="text-lg font-semibold mb-4">Contact Details</h3>
+          <ul class="space-y-2 text-teal-50">
+            <li class="flex items-center gap-3"><i class="fas fa-user text-white/90"></i> Dr. Miranda Mutinta Nene</li>
+            <li class="flex items-center gap-3"><i class="fas fa-briefcase text-white/90"></i> School Director</li>
+            <li class="flex items-center gap-3"><i class="fas fa-phone text-white/90"></i> +260 978 443 323</li>
+            <li class="flex items-center gap-3"><i class="fas fa-envelope text-white/90"></i> milestoneschool.education@gmail.com</li>
+          </ul>
+          <a href="mailto:milestoneschool.education@gmail.com" class="mt-5 inline-flex items-center justify-center w-full px-4 py-2 bg-white text-primary font-semibold rounded-xl hover:bg-primary/10 transition-colors">Send an Email</a>
+        </div>
 
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Programs and Extra-Curricular Activities</h3>
-      <p class="mb-4 leading-relaxed">
-        The school provides strong literacy and numeracy programs along with science and student wellbeing. Staff take part in continued professional growth and the school uses clear assessment and reporting. Students enjoy activities such as sports, art, media, STEAM, soccer, volleyball, netball, and ICT.
-      </p>
+        <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Address</h3>
+          <p class="text-gray-700">House No. 31 Holly Street,<br>Kabwe, Zambia</p>
+          <a href="https://maps.google.com/?q=House+No.+31+Holly+Street,+Kabwe,+Zambia" target="_blank" class="inline-flex items-center gap-2 mt-3 text-primary hover:underline"><i class="fas fa-map-pin"></i> View on Map</a>
+        </div>
 
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Enrolment</h3>
-      <p class="mb-4 leading-relaxed">
-        The school began in 2008 with only six nursery children. It now offers learning from Nursery to Primary Seven and supports more than four hundred learners.
-      </p>
-
-      <h3 class="text-xl font-bold text-gray-800 mt-6 mb-2">Where We Want to Be</h3>
-      <p class="mb-4 leading-relaxed">
-        A second campus is under construction and is expected to be complete by December 2024.
-      </p>
-
-      <hr class="my-8 border-gray-300">
-
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">Director Profile</h2>
-      <h3 class="text-xl font-bold text-gray-800 mb-2">Miranda Nene: The Mind Behind Milestone School</h3>
-      <p class="mb-4 leading-relaxed">
-        Miranda Mutinta Nene is an accomplished educator with more than a decade of experience. She holds a Bachelor of Education and a Master of Education from Mulungushi University. Over sixteen years, she has managed Milestone School and worked with several organizations, including serving as a teacher with the Ministry of Education.
-      </p>
-      <p class="mb-4 leading-relaxed">
-        Her skills include team leadership, attention to detail, problem-solving, and strong communication. She has guided the school in community efforts such as support to Kakama and Buyantashi Primary Schools. The school has awarded bursaries to learners and has helped students in universities and secondary schools.
-      </p>
-      <p class="mb-4 leading-relaxed">
-        Miranda also served as chairperson for the Kabwe Chapter of Ladies Circle Zambia, participating in humanitarian programs.
-      </p>
+        <div class="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6" data-aos="fade-left" data-aos-delay="200">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Our Values</h3>
+          <ul class="grid grid-cols-2 gap-2 text-gray-700">
+            <li>God-fearing</li>
+            <li>Love & compassion</li>
+            <li>Excellence</li>
+            <li>Discipline</li>
+            <li>Respect</li>
+            <li>Accountability</li>
+            <li>Team work</li>
+          </ul>
+        </div>
+      </aside>
     </section>
   </main>
 
@@ -184,20 +216,20 @@
           </div>
           <p class="text-gray-100 mb-6">Stay connected with us on social media</p>
           <div class="flex flex-wrap gap-4">
-            <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+            <a href="https://www.facebook.com/share/1CVBoLNmru/" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform" aria-label="Facebook">
               <i class="fab fa-facebook text-white text-2xl group-hover:scale-110 transition-transform"></i>
             </a>
-            <a href="https://wa.me/260978443323" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-green-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+            <a href="https://wa.me/260978443323" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-green-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform" aria-label="WhatsApp">
               <i class="fab fa-whatsapp text-white text-2xl group-hover:scale-110 transition-transform"></i>
             </a>
-            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform" aria-label="TikTok">
               <i class="fab fa-tiktok text-white text-2xl group-hover:scale-110 transition-transform"></i>
             </a>
-            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform" aria-label="Instagram">
               <i class="fab fa-instagram text-white text-2xl group-hover:scale-110 transition-transform"></i>
             </a>
 
-            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform">
+            <a href="#" target="_blank" class="group w-14 h-14 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform" aria-label="YouTube">
             <i class="fab fa-youtube text-white text-2xl group-hover:scale-110 transition-transform"></i>
           </a>
           </div>
@@ -219,13 +251,18 @@
   </div>
 
   <!-- Back to Top Button -->
-  <button id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-primary to-teal-500 text-white rounded-full shadow-hard hover:shadow-glow hover:scale-110 transform transition-all duration-300 opacity-0 invisible flex items-center justify-center group">
+  <button id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-primary to-teal-500 text-white rounded-full shadow-hard hover:shadow-glow hover:scale-110 transform transition-all duration-300 opacity-0 invisible flex items-center justify-center group focus:outline-none focus:ring-4 focus:ring-primary/30">
     <i class="fas fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
   </button>
     
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-quart',
+      once: true,
+      offset: 60,
+    });
   </script>
 </body>
 </html>

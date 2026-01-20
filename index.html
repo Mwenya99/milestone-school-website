@@ -242,13 +242,17 @@
 
       <!-- Right Content - 3D Image/Illustration -->
       <div class="relative animate-slide-up delay-300">
-        <div class="relative">
+        <div class="relative overflow-hidden">
           <div class="absolute -inset-4 bg-gradient-to-r from-secondary to-orange-400 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
           <img id="slideshow"
                src="assets/pupils.jpg" 
                alt="Milestone School Students"
-               class="relative rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-700 w-full h-auto translate-x-full object-cover"
+               class="relative rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-0 w-full h-auto ease-in-out object-cover"
                onerror="this.src='assets/Milestone.jpg'">
+
+               <img id="slide-next"
+       class="absolute inset-0 w-full h-auto object-cover rounded-2xl transition-transform duration-0 translate-x-full"
+          alt="Next Slide">
         </div>
         
         <!-- Floating Badges -->
@@ -804,20 +808,35 @@
     'assets/funding.jpg',
     'assets/pupils-2.jpg',
     'assets/sports.jpg'
-  ]
+  ];
 
   let currentIndex = 0;
   const slideshow = document.getElementById('slideshow');
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    slideshow.classList.add('opacity-0');
-    setTimeout(() => {
-      slideshow.src = images[currentIndex];
-      slideshow.classList.remove('opacity-0');
-    }, 700);
-  }, 3000);
 
+  setInterval(() => {
+    // slide out to the left
+    slideshow.style.transform = 'translateX(-100%)';
+
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      slideshow.src = images[currentIndex];
+
+      // instantly move to the right (off screen)
+      slideshow.style.transition = 'none';
+      slideshow.style.transform = 'translateX(100%)';
+
+      // force reflow
+      slideshow.offsetHeight;
+
+      // slide in to center
+      slideshow.style.transition = 'transform 0.1s ease-in-out';
+      slideshow.style.transform = 'translateX(0)';
+    }, 0);
+  }, 5000);
 </script>
+
+
+
 
 </body>
 </html>
