@@ -11,6 +11,8 @@ Simply double-click one of these files:
 
 The server will start on `http://localhost:8000` and your browser will open automatically.
 
+**Mobile Access:** The server is now accessible on your local network! When you start the server, it will display your local IP address. Connect your mobile device to the same Wi-Fi network and access the website using the displayed IP address (e.g., `http://192.168.1.100:8000`).
+
 Press `Ctrl+C` in the terminal to stop the server.
 
 ---
@@ -90,9 +92,30 @@ If port 8000 is already in use, you can:
 
 ---
 
+## Mobile Device Access
+
+The server is configured to be accessible on your local network, allowing you to test the website on mobile devices.
+
+### Steps to Access from Mobile:
+
+1. **Start the server** using one of the batch scripts
+2. **Note the IP address** displayed in the console (e.g., `http://192.168.1.100:8000`)
+3. **Connect your mobile device** to the same Wi-Fi network as your computer
+4. **Open a browser** on your mobile device
+5. **Enter the IP address** shown in the server console (e.g., `http://192.168.1.100:8000`)
+
+### Troubleshooting Mobile Access:
+
+- **Can't connect?** Make sure both devices are on the same Wi-Fi network
+- **Firewall blocking?** You may need to allow the server through Windows Firewall
+- **IP address not showing?** Run `ipconfig` in Command Prompt and look for "IPv4 Address" under your active network adapter
+
+---
+
 ## Notes
 
 - The server will serve files from the current directory
 - Make sure you're in the project root folder when running the script
 - All HTML files should be accessible via `http://localhost:8000/filename.html`
 - The homepage is at `http://localhost:8000/index.html` or just `http://localhost:8000/`
+- For mobile access, use your computer's local IP address instead of `localhost`
