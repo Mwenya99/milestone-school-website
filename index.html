@@ -68,8 +68,8 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="assets/logo.png" as="image" fetchpriority="high">
-  <link rel="preload" href="assets/pupils.jpg" as="image" fetchpriority="high">
+  <link rel="preload" href="assets/logo.png" as="image">
+  <link rel="preload" href="assets/pupils.jpg" as="image">
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
@@ -84,6 +84,7 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
   
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
@@ -288,19 +289,33 @@
 
 <style>
 .nav-underline {
-  @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-3/4;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #1a5f7a, #4fc3f7);
+  transition: all 300ms;
+}
+
+.nav-link:hover .nav-underline {
+  width: 75%;
 }
 
 .nav-link.active .nav-underline {
-  @apply w-3/4;
+  width: 75%;
 }
 
 .nav-link.active {
-  @apply text-primary font-semibold;
+  color: #1a5f7a;
+  font-weight: 600;
 }
 
 .mobile-nav-link.active {
-  @apply bg-primary/10 text-primary font-semibold;
+  background-color: rgba(26, 95, 122, 0.1);
+  color: #1a5f7a;
+  font-weight: 600;
 }
 </style>
 
@@ -383,7 +398,8 @@
                  class="absolute inset-0 w-full h-auto object-cover rounded-2xl transition-transform duration-0 translate-x-full"
                  alt="Next Slide"
                  width="800" height="600"
-                 loading="lazy">
+                 loading="lazy"
+                 onerror="this.src='assets/Milestone.jpg'">
           </picture>
         </div>
         

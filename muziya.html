@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body class="bg-cover bg-center bg-no-repeat bg-fixed font-poppins text-gray-800" style="background-image: url('assets/Mr. Muziya Background.jpg'); filter: blur(5px);">
+<body class="font-poppins text-gray-800 min-h-screen">
+  <div aria-hidden="true" class="fixed inset-0 bg-cover bg-center bg-no-repeat"
+       style="background-image: url('assets/Mr. Muziya Background.jpg'); filter: blur(6px); transform: scale(1.05); z-index: 0;"></div>
+  <div aria-hidden="true" class="fixed inset-0 bg-white/20" style="z-index: 0;"></div>
+  <div class="relative" style="z-index: 1;">
 
   <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur-lg bg-white/90 supports-backdrop-blur:bg-white/95 shadow-soft">
@@ -128,7 +132,7 @@
         <i class="fab fa-whatsapp text-xl group-hover:animate-bounce"></i> WhatsApp
       </a>
       <a href="mailto:milestoneschool.education@gmail.com"
-         class="group flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-3 px-6 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold">
+         class="group flex items-center justify-center gap-3 bg-gradient-to-r from-primary to-accent text-white py-3 px-6 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold">
         <i class="fas fa-envelope text-xl group-hover:animate-bounce"></i> Email
       </a>
     </div>
@@ -244,6 +248,8 @@
   <button id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-primary to-teal-500 text-white rounded-full shadow-hard hover:shadow-glow hover:scale-110 transform transition-all duration-300 opacity-0 invisible flex items-center justify-center group">
     <i class="fas fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
   </button>
+
+  </div>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
